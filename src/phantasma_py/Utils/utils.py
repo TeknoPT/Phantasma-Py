@@ -63,7 +63,7 @@ def int2buffer(i):
     return i.to_bytes((i.bit_length() + 7) // 8, 'big')
 
 
-def get_address_from_public_key(public_key):
+def get_address_from_public_key(public_key) -> Address:
     # Decode the public key from Base16 (hex) to bytes
     pub_key_bytes = base64.b16decode(public_key.upper())
 
